@@ -4,74 +4,75 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Domain for Sales</title>
+    <title>Domain for Sale – example.com</title>
     <meta name="description" content="This domain is for sale. Complete the form to make an offer." />
     <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="wrapper">
-            <h1 class="page-title">This domain is for sale</h1>
-            <p class="subtitle">Interested in buying this domain? Complete the form below and we’ll be in touch.</p>
-        </div>
-    </header>
-
     <main class="wrapper">
-        <section class="card">
-            <h2 class="form-title">Complete this form if you are interested in buying this domain</h2>
+        <div class="layout">
+            <!-- Left side: heading + paragraph -->
+            <section class="intro">
+                <h1 class="page-title">This domain is for sale</h1>
+                <p class="lead">
+                    The domain <mark class="highlight-domain">example.com</mark> is available.
+                    If you’re interested, please submit your offer using the form.
+                    <br><br>
+                    Complete this form if you are interested in buying this domain
+                </p>
+            </section>
 
-            <!-- Update the action attribute to your server endpoint (e.g., action="submit.php") -->
-            <form class="offer-form" action="" method="post">
-                <div class="field">
-                    <label for="domain">Domain</label>
-                    <input id="domain" name="domain" type="text" value="example.com" readonly aria-readonly="true" />
-                </div>
+            <!-- Right side: form -->
+            <section class="card">
 
-                <div class="field">
-                    <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
-                    <input id="name" name="name" type="text" autocomplete="name" required />
-                </div>
-
-                <div class="field">
-                    <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
-                    <input id="email" name="email" type="email" autocomplete="email" required />
-                </div>
-
-                <div class="field">
-                    <label for="phone">Phone (optional)</label>
-                    <input id="phone" name="phone" type="tel" autocomplete="tel" />
-                </div>
-
-                <div class="field">
-                    <label for="offer">Offer (GBP) <span class="req" aria-hidden="true">*</span></label>
-                    <div class="currency-input">
-                        <span class="currency" aria-hidden="true">£</span>
-                        <input id="offer" name="offer" type="number" inputmode="decimal" min="0" step="0.01" required
-                            aria-describedby="offer-hint" />
+                <!-- Replace action="" with your endpoint later (e.g., submit.php) -->
+                <form class="offer-form" action="" method="post">
+                    <div class="field">
+                        <label for="domain">Domain</label>
+                        <input id="domain" name="domain" type="text" value="example.com" readonly
+                            aria-readonly="true" />
                     </div>
-                    <small id="offer-hint" class="hint">Enter your offer in GBP.</small>
-                </div>
 
-                <div class="field">
-                    <label for="message">Message (optional)</label>
-                    <textarea id="message" name="message" rows="5"></textarea>
-                </div>
+                    <div class="field">
+                        <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+                        <input id="name" name="name" type="text" autocomplete="name" required />
+                    </div>
 
-                <div class="actions">
-                    <button type="submit">Send Offer</button>
-                </div>
+                    <div class="field">
+                        <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                        <input id="email" name="email" type="email" autocomplete="email" required />
+                    </div>
 
-                <p class="smallprint">Fields marked <span class="req">*</span> are required.</p>
-            </form>
-        </section>
-    </main>
+                    <div class="field">
+                        <label for="phone">Phone (optional)</label>
+                        <input id="phone" name="phone" type="tel" autocomplete="tel" />
+                    </div>
 
-    <footer class="site-footer">
-        <div class="wrapper">
-            <p class="muted">No company branding. This is a generic domain-sale page.</p>
+                    <div class="field">
+                        <label for="offer">Offer (GBP) <span class="req" aria-hidden="true">*</span></label>
+                        <div class="currency-input">
+                            <span class="currency" aria-hidden="true">£</span>
+                            <input id="offer" name="offer" type="number" inputmode="decimal" min="0" step="0.01"
+                                required aria-describedby="offer-hint" />
+                        </div>
+                        <small id="offer-hint" class="hint">Enter your offer in GBP.</small>
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Message (optional)</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </div>
+
+                    <div class="actions">
+                        <button type="submit">Send Offer</button>
+                    </div>
+
+                    <p class="smallprint">Fields marked <span class="req">*</span> are required.</p>
+                </form>
+            </section>
         </div>
-    </footer>
+    </main>
 </body>
 
 </html>
