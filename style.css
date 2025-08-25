@@ -58,6 +58,8 @@ body{
 .hero-inner{
   width:min(800px, 100%);
   padding: clamp(16px, 3vw, 32px);
+    z-index: 100;
+  position: relative;
 }
 
 .hero-title{
@@ -68,6 +70,8 @@ body{
   text-transform:uppercase;
   letter-spacing:.2px;
   color:#fff;
+  z-index: 100;
+  position: relative;
 }
 
 .hero-sub{
