@@ -215,6 +215,10 @@ input[type="number"]::-webkit-inner-spin-button{
 
 .actions{ margin-top: var(--space-lg); text-align:center; }
 
+.actions button{
+  border: none;
+}
+
 .smallprint{
   margin-top: 10px;
   color:#475569;
@@ -232,3 +236,4 @@ input[type="number"]::-webkit-inner-spin-button{
 @media (prefers-reduced-motion: reduce){
   *{ transition:none !important }
 }
+
