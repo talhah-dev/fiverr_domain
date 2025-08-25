@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en-GB">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,114 +8,80 @@
   <meta name="description" content="This domain is for sale. Complete the form to make an offer." />
   <link rel="stylesheet" href="/style.css" />
 </head>
+
 <body>
-  <main class="wrapper">
-    <!-- Hero / two-column -->
-    <div class="layout">
-      <!-- Left side: heading + paragraph -->
-      <section class="intro">
-        <h1 class="page-title">This domain is for sale</h1>
-        <p class="lead">
+  <main>
+    <!-- Section 1: HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <!-- Decorative shapes -->
+      <span class="decor decor-1" aria-hidden="true"></span>
+      <span class="decor decor-2" aria-hidden="true"></span>
+      <span class="decor decor-3" aria-hidden="true"></span>
+
+      <div class="container hero-inner">
+        <h1 id="hero-title" class="hero-title">This domain is for sale</h1>
+        <p class="hero-sub">
           The domain <mark class="highlight-domain">example.com</mark> is available.
-          If you’re interested, please submit your offer using the form.
-          <br><br>
-          <strong>Complete this form if you are interested in buying this domain.</strong>
+          If you’re interested, please submit your offer using the form below.
         </p>
-      </section>
-
-      <!-- Right side: form -->
-      <section class="card" aria-labelledby="form-title">
-        <h2 id="form-title" class="visually-hidden">Make an offer</h2>
-        <!-- Replace action="" with your endpoint later (e.g., submit.php) -->
-        <form class="offer-form" action="" method="post">
-          <div class="field">
-            <label for="domain">Domain</label>
-            <input id="domain" name="domain" type="text" value="example.com" readonly aria-readonly="true" />
-          </div>
-
-          <div class="field">
-            <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
-          </div>
-
-          <div class="field">
-            <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
-          </div>
-
-          <div class="field">
-            <label for="phone">Phone (optional)</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" />
-          </div>
-
-          <div class="field">
-            <label for="offer">Offer (GBP) <span class="req" aria-hidden="true">*</span></label>
-            <div class="currency-input">
-              <span class="currency" aria-hidden="true">£</span>
-              <input id="offer" name="offer" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="offer-hint" />
-            </div>
-            <small id="offer-hint" class="hint">Enter your offer in GBP.</small>
-          </div>
-
-          <div class="field">
-            <label for="message">Message (optional)</label>
-            <textarea id="message" name="message" rows="5"></textarea>
-          </div>
-
-          <div class="actions">
-            <button type="submit">Send Offer</button>
-          </div>
-
-          <p class="smallprint">Fields marked <span class="req">*</span> are required.</p>
-        </form>
-      </section>
-    </div>
-
-    <!-- Section 1: What we provide -->
-    <section class="section" aria-labelledby="provide-title">
-      <h2 id="provide-title" class="section-title">What we provide</h2>
-      <div class="grid three">
-        <article class="info-card">
-          <div class="badge">1</div>
-          <h3 class="info-title">Simple, direct sale</h3>
-          <p class="info-text">No distractions—just a clean page focused on the domain sale for <mark class="highlight-domain">example.com</mark>.</p>
-        </article>
-
-        <article class="info-card">
-          <div class="badge">2</div>
-          <h3 class="info-title">Fast responses</h3>
-          <p class="info-text">Submit your details and offer; we’ll review and respond promptly with next steps.</p>
-        </article>
-
-        <article class="info-card">
-          <div class="badge">3</div>
-          <h3 class="info-title">Clear pricing</h3>
-          <p class="info-text">Provide your best GBP offer. We aim to keep the process transparent and straightforward.</p>
-        </article>
+        <a class="btn-primary" href="#offer-form">Make an offer</a>
       </div>
     </section>
 
-    <!-- Section 2: How it works -->
-    <section class="section muted-section" aria-labelledby="how-title">
-      <h2 id="how-title" class="section-title">How it works</h2>
-      <div class="grid steps">
-        <article class="step-card">
-          <div class="step-num">1</div>
-          <h3 class="info-title">Submit your offer</h3>
-          <p class="info-text">Use the form above with your name, email, and GBP offer.</p>
-        </article>
-        <article class="step-card">
-          <div class="step-num">2</div>
-          <h3 class="info-title">We review & reply</h3>
-          <p class="info-text">We’ll respond via email to discuss acceptance or a counter-offer.</p>
-        </article>
-        <article class="step-card">
-          <div class="step-num">3</div>
-          <h3 class="info-title">Secure transfer</h3>
-          <p class="info-text">Upon agreement, we proceed with a secure domain transfer through a recognised registrar or escrow.</p>
-        </article>
+    <!-- Section 2: FORM (centered) -->
+    <section class="form-wrap" aria-labelledby="form-heading">
+      <div class="container">
+        <h2 id="form-heading" class="section-heading">Complete this form if you are interested in buying this domain
+        </h2>
+
+        <div class="card glass">
+          <!-- Replace action="" with your endpoint later (e.g., submit.php) -->
+          <form id="offer-form" class="offer-form" action="" method="post">
+            <div class="field">
+              <label for="domain">Domain</label>
+              <input id="domain" name="domain" type="text" value="example.com" readonly aria-readonly="true" />
+            </div>
+
+            <div class="field">
+              <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+
+            <div class="field">
+              <label for="offer">Offer (GBP) <span class="req" aria-hidden="true">*</span></label>
+              <div class="currency-input">
+                <span class="currency" aria-hidden="true">£</span>
+                <input id="offer" name="offer" type="number" inputmode="decimal" min="0" step="0.01" required
+                  aria-describedby="offer-hint" />
+              </div>
+              <small id="offer-hint" class="hint">Enter your offer in GBP.</small>
+            </div>
+
+            <div class="field">
+              <label for="message">Message (optional)</label>
+              <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+
+            <div class="actions">
+              <button type="submit" class="btn-primary">Send Offer</button>
+            </div>
+
+            <p class="smallprint">Fields marked <span class="req">*</span> are required.</p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 </body>
+
 </html>
